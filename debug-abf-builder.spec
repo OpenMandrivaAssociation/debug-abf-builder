@@ -12,6 +12,9 @@ etc. to debug issues with the builders.
 This package isn't meant to actually built.
 
 %prep
+rpm -q rpm rpm-build
+rpm -qf /usr/lib/rpm/platform/noarch-linux/macros
+cat /usr/lib/rpm/platform/noarch-linux/macros
 echo "arch: %{_arch}"
 echo "target_cpu: %{_target_cpu}"
 %dump
